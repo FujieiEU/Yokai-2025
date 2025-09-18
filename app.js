@@ -49,8 +49,8 @@ mm.add("(max-width: 768px)", () => {
 
 const tlStore= gsap.timeline({
     scrollTrigger: {
-      trigger: ".subu-yokai-products",
-     end: "+=100%", 
+      trigger: ".subu-yokai-footer",
+     end: "+=50%", 
     scrub: 1, 
     anticipatePin: 1, 
     onLeave: () => {
@@ -58,10 +58,10 @@ const tlStore= gsap.timeline({
     }
     }
   });
-  tlStore.from(".subu-yokai-product", {
+  tlStore.from(".subu-yokai-footer__leg", {
    y:100,
    opacity:0,
-   duration: 0.8,
+  //  duration: 0.8,
   ease: "power3.out",
   stagger: 0.2
 
