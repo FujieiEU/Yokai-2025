@@ -31,14 +31,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    background: url('./img/kv-bg-desktop.webp') no-repeat center center/cover;
     
 }
-.yokai-kv__bg{
-        width: 100%;
-        height: 100%; 
-        min-width: 100vw;
-    }
+
 .yokai-kv::after{
             content: "";
             position: absolute;
@@ -299,10 +295,7 @@
         }
 
 @media (min-width: 768px) {
-    .yokai-kv {
-        background-image: none;
-
-    }
+    
     .yokai-kv__moon{
         width: 700px;
     }
