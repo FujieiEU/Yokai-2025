@@ -10,9 +10,10 @@
     <main class="subu-yokai" id="subu-yokai">
         
         <section class="yokai-kv">
-            <video playsinline autoplay muted loop id="bgvid" controlsList="nodownload" poster="./img/kv-bg.webp">
-                <source src="https://cdn.shopify.com/videos/c/o/v/ac319f70a844471d9edb40b4a835abcf.mov" type="video/webm">
-            </video>
+           <picture>
+            <source media="(min-width: 768px)" srcset="./img/kv-bg-desktop.webp">
+            <img src="./img/kv-bg.webp" alt="Yokai Key Visual" class="yokai-kv__bg">
+           </picture>
             <img src="./img/yokai-logo.png" alt="Yokai logo" class="yokai-logo">
             <img src="./img/moon.png" alt="" id="kv-moon" class="yokai-kv__moon">
             <img src="./img/subu-pair-yokai.png" id="kv-subu-pair" alt="SUBU" class="yokai-kv__subu">

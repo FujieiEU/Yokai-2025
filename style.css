@@ -34,12 +34,12 @@
     background-image: url('./img/kv-bg.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    video{
+    
+}
+.yokai-kv__bg{
          width: 100%;
         height: 100%; 
-        display: none;
     }
-}
 .yokai-kv::after{
             content: "";
             position: absolute;
@@ -285,9 +285,7 @@
 @media (min-width: 768px) {
     .yokai-kv {
         background-image: none;
-       video{
-        display: block;
-       }
+
     }
     .yokai-kv__moon{
         width: 700px;
