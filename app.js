@@ -1,4 +1,5 @@
 // GSAP Animation
+
 gsap.registerPlugin(ScrollTrigger);
 let mm = gsap.matchMedia();
 const tlKv= gsap.timeline({
@@ -66,6 +67,18 @@ const tlStore= gsap.timeline({
   stagger: 0.2
 
   })
+
+//  document.querySelectorAll(".subu-yokai__eye").forEach(eye => {
+//   gsap.to(eye, {
+//     x: "+=10",
+//     y:"+=5",
+//     duration: 0.1,
+//     stagger: 0.3,
+//     repeat: 5,
+//     yoyo: true,
+//     delay: gsap.utils.random(0, 1) 
+//   });
+// });
 //Store Cards Random Rotation
 
 function randomizeCardRotation() {
