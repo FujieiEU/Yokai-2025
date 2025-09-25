@@ -10,7 +10,7 @@
     min-width: 100%;
     margin: 0 auto;
     padding: 0;
-    background-color: black;
+    background-color: #250E4E;
     color: #fff;
     overflow-x: hidden;
 }
@@ -31,34 +31,28 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url('./img/kv-bg-desktop.webp') no-repeat center center/cover;
+    background: url('./img/subu-kv-bg-mobile.webp') no-repeat center center/cover;
     
 }
+.yokai-kv svg{
+    display: none;
+}
 
-.yokai-kv::after{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg,rgba(2, 2, 48, 0.8) 0%, rgba(0, 0, 0,1) 100%);
-}
-.yokai-kv__moon{
-    position: absolute;
-    top: 50%;
-    left: 50%;  
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    width: 300px;
-    max-width: 100%;
-}
 .yokai-kv__subu{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;  
     transform: translate(-50%, -50%);
     z-index: 6;
+    width: 250px;
+    max-width: 100%;
+}
+.yokai-kv__dots{
+    position: absolute;
+    top: 45%;
+    left: 55%;  
+    transform: translate(-50%, -50%);
+    z-index: 5;
     width: 150px;
     max-width: 100%;
 }
@@ -72,21 +66,7 @@
     height: auto;
     z-index: 10;
 }
-.kv-ofuda{
-    position: absolute;
-    z-index: 7;
-    width: 50px;
-}
-.kv-ofuda--first{
-    top: 10%;
-    right: 10%;
-    rotate: 5deg;
-}
-.kv-ofuda--second{
-    top: 50%;
-    left: 10%;
-    rotate: -5deg;
-}
+
 .subu-yokai-intro{
     padding: 2rem 1rem;
     display: flex;
@@ -95,23 +75,7 @@
     align-items: center;
     text-align: center;
      min-height: 100%;
-   /* 
-   NOISE EFFECT
-   background: 
-    repeating-radial-gradient(#000 0 0.0001%,#565656 0 0.0002%) 50% 0/2500px 2500px,
-    repeating-conic-gradient(#000 0 0.0001%,#565656 0 0.0002%) 60% 60%/2500px 2500px;
-  background-blend-mode: difference;
-  animation: b 0.2s infinite alternate;
-}
-@keyframes b{
-  100% {background-position: 50% 0, 60% 50%}
-    h2{
-        font-size: 1.5rem;
-        padding: 2rem;
-        text-align: center;
-        
-    }
-} */
+
 }
 .subu-yokai-about{
     position: relative;
@@ -119,15 +83,46 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+      background-image: url('./img/washi-paper.jpg');
+       background-repeat: no-repeat;
+       background-size: cover;
+    color: black;
+    padding: 1rem;
 
+
+}
+.subu-yokai-about::after{
+    content: '';
+    width: 100%;
+    height: 50px;
+    background-image: url('./img/washi-paper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    mask-image: url(img/decor-top.png);
+    mask-size: contain;
+    position: absolute;
+    top:-4%;
+    mask-repeat: repeat-x;
+}
+.subu-yokai-about::before{
+    content: '';
+    width: 100%;
+    height: 50px;
+    background-image: url('./img/washi-paper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    mask-image: url(img/decor-bottom.png);
+    mask-size: contain;
+    position: absolute;
+    bottom:-6%;
+    mask-repeat: repeat-x;
 }
 .subu-yokai-about .subu-yokai__eye{
     position: absolute;
-    width: 100px;
+    width: 200px;
     transition: transform 0.3s ease;
 }
-.subu-yokai__eye:hover {
+.subu-yokai-about .subu-yokai__eye:hover:not(:nth-child(3)) {
   animation: bounce 0.6s cubic-bezier(.28,.84,.42,1) infinite;
 }
 
@@ -143,17 +138,19 @@
   }
 }
 .subu-yokai-about .subu-yokai__eye:nth-child(1){
-    top: 10%;
-    right: 5%;
+    width: 100px;
+    top: 0%;
+    right: -12%;
 }
 
 .subu-yokai-about .subu-yokai__eye:nth-child(2){
     top: 50%;
-    left: 5%;
+    left: 0%;
     display: none;
 }
 .subu-yokai-about .subu-yokai__eye:nth-child(3){
-    bottom: 10%;
+    width: 140px;
+    bottom: -10%;
     right: 5%;
 }
 .subu-yokai-about__content{
@@ -161,10 +158,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #E7DFC8;
-    background: linear-gradient(180deg,rgba(231, 223, 200, 1) 0%, rgba(222, 207, 168, 1) 100%);
-    color: black;
-    padding: 1rem;
+    
 }
 .subu-yokai-about__text{
     max-width: 90%;
@@ -179,6 +173,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 4rem 0;
 }
 .subu-yokai-video img{
     max-width: 100%;
@@ -200,7 +195,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+      background-image: url('./img/washi-paper.jpg');
+       background-repeat: repeat;
+       background-size: contain;
 
+}
+.subu-yokai-products::after{
+    content: '';
+   width: 100%;
+   height: 50px;
+    background-image: url('./img/washi-paper.jpg');
+       background-repeat: no-repeat;
+       background-size: cover;
+   mask-image: url(img/decor-top.png);
+    mask-size: contain;
+    position: absolute;
+    top:-0.35%;
+    mask-repeat: repeat-x;
+}
+.subu-yokai-products::before{
+    content: '';
+   width: 100%;
+   height: 50px;
+    background-image: url('./img/washi-paper.jpg');
+       background-repeat: no-repeat;
+       background-size: cover;
+   mask-image: url(img/decor-bottom.png);
+    mask-size: contain;
+    position: absolute;
+    bottom:-0.45%;
+     mask-repeat: repeat-x;
 }
 .subu-yokai-products .subu-yokai__eye{
     position: absolute;
@@ -225,9 +249,8 @@
     gap: 1rem;
     width: 100%;
     padding: 2rem;
-    background: #E7DFC8;
-    background: linear-gradient(180deg,rgba(231, 223, 200, 1) 0%, rgba(222, 207, 168, 1) 100%);
 }
+
 .subu-yokai-product{
     transition: transform 0.3s ease;
 }
@@ -236,88 +259,73 @@
 }
 
 .subu-yokai-footer{
-    margin-top: -10px;
     display: flex;
+    width: 100%;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: rgba(222, 207, 168, 1);
+    justify-content: center;
     padding-top:1rem;
     overflow: hidden;
+    padding: 2rem;
+    position: relative;
 }
-.subu-yokai-footer__leg{
+.subu-yokai-footer__logo{
+    width: 120px;
     height: auto;
-    max-height: 150px;
+    align-self: center;
 }
 
-.subu-yokai-footer__leg:nth-child(1){
-            transform: rotate(10deg);
-            translate: -10px 20px;
-        }
-          .subu-yokai-footer__leg:nth-child(2){
-            transform: rotate(0deg);
-            translate: 0px 20px;
-        }
-          .subu-yokai-footer__leg:nth-child(3){
-            transform: rotate(0deg);
-            translate: 0px 0px;
-        }
-          .subu-yokai-footer__leg:nth-child(4){
-            transform: rotate(0deg);
-            translate: 0px 60px;
-        }
-          .subu-yokai-footer__leg:nth-child(5){
-            transform: rotate(0deg);
-            translate: 0px 0px;
-        }
-        .subu-yokai-footer__leg:nth-child(6){
-            transform: rotate(0deg);
-            translate: 0px 20px;
-            transform: scale(-1, 1);
-        }
-        .subu-yokai-footer__leg:nth-child(7){
-            transform: rotate(0deg);
-            translate: 0px 20px;
-            transform: scale(-1, 1);
-        }
-        .subu-yokai-footer__leg:nth-child(8){
-            transform: rotate(0deg);
-            translate: 0px 80px;
-            transform: scale(-1, 1);
-        }
-        .subu-yokai-footer__leg:nth-child(9){
-            transform: rotate(5deg);
-            translate: 0px 20px;
-            transform: scale(-1, 1);
-        }
-          .subu-yokai-footer__leg:nth-child(10){
-            translate: 0px 10px;
-            transform: scale(-1, 1) rotate(15deg);
-        }
-
+.subu-yokai-footer__monster{
+    position: absolute;
+    width: 250px;
+    height: auto;
+    bottom: 0;
+    z-index: 5;
+    display: none;
+}
+.subu-yokai-footer__monster:nth-child(2){
+   left: 2%;
+}
+.subu-yokai-footer__monster:nth-child(3){
+    right: 2%;
+}
 @media (min-width: 768px) {
     
-    .yokai-kv__moon{
-        width: 700px;
-    }
     .yokai-kv__subu{
-        width: 300px;
+        width: 400px;
     }
-    .kv-ofuda{
-        width: 150px;
-    }
+   .yokai-kv__dots{
+    position: absolute;
+    top: 45%;
+    left: 51%;  
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 250px;
+    max-width: 100%;
+}
     .subu-yokai-intro{
+        padding: 4rem 0;
         h2{
             font-size: 3rem;
         }
     }
-
+ 
     .subu-yokai-about__text{
         max-width: 70%;
         text-align: center;
         font-size: 2rem;
     }
+    .subu-yokai-about .subu-yokai__eye:nth-child(1){
+        width: 200px;
+    top: 0%;
+    right: 2%;
+}
         .subu-yokai-about .subu-yokai__eye:nth-child(2){
             display: block;
+        }
+         .subu-yokai-about .subu-yokai__eye:nth-child(3){
+            width: 200px;
+            bottom: -8%;
+            right: 2%;
         }
 
         .subu-yokai-video{
@@ -335,53 +343,38 @@
             display: block;
             align-self: center;
         }
-        .subu-yokai-footer__leg{
-            height: auto;
-            max-height: 400px;
-        
+       
+        .subu-yokai-footer__monster{
+            display: block;
         }
-        .subu-yokai-footer__leg:nth-child(1){
-            transform: rotate(10deg);
-            translate: -10px 120px;
-        }
-          .subu-yokai-footer__leg:nth-child(2){
-            transform: rotate(0deg);
-            translate: 0px 50px;
-        }
-          .subu-yokai-footer__leg:nth-child(3){
-            transform: rotate(0deg);
-            translate: 0px 0px;
-        }
-          .subu-yokai-footer__leg:nth-child(4){
-            transform: rotate(0deg);
-            translate: 0px 180px;
-        }
-          .subu-yokai-footer__leg:nth-child(5){
-            transform: rotate(0deg);
-            translate: 0px 0px;
-        }
-        .subu-yokai-footer__leg:nth-child(6){
-            transform: rotate(0deg);
-            translate: 0px 50px;
-            transform: scale(-1, 1);
-        }
-        .subu-yokai-footer__leg:nth-child(7){
-            transform: rotate(0deg);
-            translate: 0px 50px;
-            transform: scale(-1, 1);
-        }
-        .subu-yokai-footer__leg:nth-child(8){
-            transform: rotate(0deg);
-            translate: 0px 200px;
-            transform: scale(-1, 1);
-        }
-        .subu-yokai-footer__leg:nth-child(9){
-            transform: rotate(5deg);
-            translate: 0px 50px;
-            transform: scale(-1, 1);
-        }
-          .subu-yokai-footer__leg:nth-child(10){
-            translate: 0px 50px;
-            transform: scale(-1, 1) rotate(15deg);
-        }
+}
+
+@media (min-width: 998px) {
+   .yokai-kv svg{
+    display: block;
+}
+.subu-yokai-about{
+    min-height: 500px;
+
+}
+   .subu-yokai-about::after{
+    mask-size: contain;
+    position: absolute;
+    top:-10%;
+}
+.subu-yokai-about::before{
+    mask-size: contain;
+    position: absolute;
+    bottom:-10%;
+}
+    .subu-yokai-products::after{
+    mask-size: contain;
+    position: absolute;
+    top:-1.5%;
+    }
+    .subu-yokai-products::before{
+        mask-size: contain;
+        position: absolute;
+        bottom:-1.5%;
+    }
 }

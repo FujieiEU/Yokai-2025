@@ -14,39 +14,54 @@ const tlKv= gsap.timeline({
     }
     }
   });
-  mm.add("(min-width: 769px)", () => {
-  // Desktop
-  tlKv.from(".yokai-logo", {
-    y: 250,
-    scale: 3,
-  });
-});
+//   mm.add("(min-width: 769px)", () => {
+//   // Desktop
+//   tlKv.from(".yokai-logo", {
+//     y: 250,
+//     scale: 3,
+//   });
+// });
 
-mm.add("(max-width: 768px)", () => {
-  // Mobile
-  tlKv.from(".yokai-logo", {
-    y: 150,
-    scale: 1.5,
-  });
-});
+// mm.add("(max-width: 768px)", () => {
+//   // Mobile
+//   tlKv.from(".yokai-logo", {
+//     y: 150,
+//     scale: 1.5,
+//   });
+// });
   tlKv.from(".yokai-kv__subu", {
     y: 100,
     opacity:0,
     duration:10,
   },"<+=0.3")
-  tlKv.from(".yokai-kv__moon", {
-    opacity:0,
-    scale:0,
-    duration:10,
-  },"<+=0.3")
-  .from(".kv-ofuda--first",{
-    y:200,
-    opacity:0,
-  },"<+=0.3")
-  .from(".kv-ofuda--second",{
-    y:200,
-    opacity:0,
-  })
+// gsap.fromTo("#moon-light", 
+//   {
+//     scale: 1,
+//     opacity: 0.6, // slightly dim base
+//     filter: "brightness(1)" 
+//   }, 
+//   {
+//     scale: 1.01,  // a bit bigger
+//     opacity: 0.8, // brighter
+//     filter: "brightness(1.5)", // brighter effect
+//     duration: 1.5,
+//     yoyo: true,
+//     repeat: -1,
+//     ease: "sine.inOut"
+//   }, "<+=0.3");
+  // tlKv.from(".yokai-kv__moon", {
+  //   opacity:0,
+  //   scale:0,
+  //   duration:10,
+  // },"<+=0.3")
+  // .from(".kv-ofuda--first",{
+  //   y:200,
+  //   opacity:0,
+  // },"<+=0.3")
+  // .from(".kv-ofuda--second",{
+  //   y:200,
+  //   opacity:0,
+  // })
 
 const tlStore= gsap.timeline({
     scrollTrigger: {
@@ -59,27 +74,10 @@ const tlStore= gsap.timeline({
     }
     }
   });
-  tlStore.from(".subu-yokai-footer__leg", {
-   y:100,
-   opacity:0,
-  //  duration: 0.8,
-  ease: "power3.out",
-  stagger: 0.2
+ 
 
-  })
 
-//  document.querySelectorAll(".subu-yokai__eye").forEach(eye => {
-//   gsap.to(eye, {
-//     x: "+=10",
-//     y:"+=5",
-//     duration: 0.1,
-//     stagger: 0.3,
-//     repeat: 5,
-//     yoyo: true,
-//     delay: gsap.utils.random(0, 1) 
-//   });
-// });
-//Store Cards Random Rotation
+//Store SUBU Random Rotation
 
 function randomizeCardRotation() {
   const cards = document.querySelectorAll('.subu-yokai-product');
